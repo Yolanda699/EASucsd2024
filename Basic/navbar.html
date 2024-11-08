@@ -1,0 +1,78 @@
+<!-- navbar.html -->
+<style>
+    /* Navbar Styles */
+    .navbar {
+      display: flex;
+      justify-content: space-around; /* Space titles evenly */
+      background-color: #333;
+      padding: 10px;
+      width: 100%; /* Full width */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .nav-item {
+      position: relative; /* Position for dropdowns */
+      color: white;
+      text-align: center;
+      flex-grow: 1; /* Make items grow evenly */
+      padding: 10px 0; /* Padding for clickable areas */
+      text-decoration: none;
+      cursor: pointer; /* Change cursor to pointer for all items */
+    }
+    .nav-item a {
+      color: white; /* Ensure links are white */
+      text-decoration: none; /* Remove underline from links */
+      display: block; /* Make links take full width */
+    }
+    .nav-item:hover {
+      background-color: #555; /* Change background on hover */
+    }
+    .nav-item:hover a {
+      color: white; /* Keep link color consistent on hover */
+    }
+    .dropdown {
+      display: none; /* Hide dropdown by default */
+      position: absolute; /* Position dropdowns */
+      top: 100%; /* Position below the parent */
+      left: 0;
+      background-color: #333;
+      min-width: 100%; /* Match parent width */
+      z-index: 1; /* Ensure dropdown appears above other content */
+    }
+    .nav-item:hover .dropdown {
+      display: block; /* Show dropdown on hover */
+    }
+    .dropdown-item {
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      display: block; /* Stack dropdown items */
+    }
+    .dropdown-item:hover {
+      background-color: #444; /* Hover effect for dropdown items */
+    }
+  </style>
+  
+  <nav class="navbar">
+    <div class="nav-item"><a href="index.html">Home</a></div>
+    <div class="nav-item">About
+      <div class="dropdown">
+        <a class="dropdown-item" href="background.html">Background</a>
+        <a class="dropdown-item" href="our_team.html">Our Team</a>
+      </div>
+    </div>
+    <div class="nav-item">Interviews
+      <div class="dropdown">
+        <a class="dropdown-item" href="chinese.html">Chinese</a>
+        <a class="dropdown-item" href="japanese.html">Japanese</a>
+        <a class="dropdown-item" href="korean.html">Korean</a>
+      </div>
+    </div>
+    <div class="nav-item">Highlights
+      <div class="dropdown">
+        <a class="dropdown-item" href="insights.html">Insights</a>
+        <a class="dropdown-item" href="future.html">Future</a>
+      </div>
+    </div>
+    <div class="nav-item"><a href="contribute.html">Contribute</a></div>
+  </nav>
+  

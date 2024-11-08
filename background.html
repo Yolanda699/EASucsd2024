@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file if needed -->
+    <style>
+        body {
+            margin: 0; /* Remove default margin from body */
+            font-family: Arial, sans-serif; /* Set font family */
+        }
+        .navbar, .footer {
+            width: 100%; /* Ensure full width */
+            padding: 0; /* Remove padding for no extra space */
+            background-color: #f8f9fa; /* Example background color, adjust as needed */
+        }
+        h1 {
+            text-align: center; /* Center the heading */
+            margin: 20px 0; /* Margin above and below the title */
+        }
+        .content {
+            margin: 40px; /* Add margin for spacing around the content */
+            line-height: 1.6; /* Improve readability */
+        }
+        .content img {
+            display: block;
+            margin: 0 auto 20px auto; /* Center image with spacing below */
+            width: 80%; /* Adjust width to fit the page nicely */
+            max-width: 600px; /* Limit max width */
+        }
+        .content p, .content h2 {
+            margin-bottom: 16px; /* Space between paragraphs and headings */
+        }
+        .content h2 {
+            font-size: 1.5em;
+        }
+        .content strong em {
+            font-style: italic;
+            font-weight: bold; /* Bold and italicize specified phrases */
+        }
+        .citation {
+            border-top: 1px solid #ccc; /* Light grey line on top */
+            margin-top: 20px;
+            padding-top: 10px;
+            font-size: 0.9em; /* Smaller font size */
+            color: grey; /* Grey text color */
+            line-height: 1.4; /* Adjust line height for readability */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Load Navbar -->
+    <div id="navbar-container"></div>
+
+    <h1>Background</h1>
+
+    <div class="content">
+        <img src="Placeholder.jpg" alt="Placeholder Image">
+
+        <h2>Why EAS UCSD?</h2>
+        <p><em><strong>Empowering Asian Students</strong></em> at UC San Diego addresses the unique needs of a substantial demographic. Students from East Asia, particularly China, represent one of the largest groups of international students in U.S. universities, despite recent minor enrollment dips due to factors like the pandemic. Chinese students alone numbered nearly 289,526 in the 2022-2023 school year, taking up 27.4% of all incoming students.<sup>1, 2</sup> However, this group often faces specific challenges beyond language barriers, with cultural gaps impacting social integration and academic confidence.<sup>3</sup> These students frequently navigate information gaps about resources and campus life, which hinders their ability to thrive. While many are proficient in English, cultural nuances in communication, academic expectations, and social norms can lead to feelings of isolation or misunderstanding, highlighting the need for targeted support structures.</p>
+
+        <!-- New BGStats image added here -->
+        <img src="BGStats.jpg" alt="Statistics Background Image">
+
+        <p>Moreover, recent findings reveal that mental health and cultural adjustment challenges are common but uniquely complex for this group, which includes diverse Asian and Asian American backgrounds. Studies indicate that Asian American students often encounter higher levels of suicidal ideation yet are least likely to seek support.<sup>4</sup> This is partly due to cultural norms that discourage discussing mental health and the difficulty of finding ethnically matched, culturally attuned mental health providers on campus.</p>
+
+        <p>Beyond that, the model minority myth, which stereotypes Asian students as inherently high-achieving and resilient, can inadvertently add to their challenges. This myth can lead to their needs being overlooked by educators, who may assume these students do not require additional support.<sup>5</sup> Consequently, Asian students may feel isolated or unsupported, especially if they don't align with these expectations.</p>
+
+        <p>Given these challenges, <em><strong>Empowering Asian Students</strong></em> seeks to bridge these gaps by fostering a supportive, culturally sensitive environment that promotes integration and shared experiences for both international and domestic students of Asian descent. This initiative is essential in creating a campus community where all students feel welcomed and empowered.</p>
+
+        <p><strong>Essay:</strong> <em>Empowering Asian Students at UC San Diego for Inclusive Growth</em> by Yolanda Liu Xingyan, November 4, 2024</p>
+
+        <!-- Citations -->
+        <div class="citation">
+            <p>1. Statista. 2018. “Number of Chinese Students in the U.S. 2018.” Statista. Statista. 2018. https://www.statista.com/statistics/372900/number-of-chinese-students-that-study-in-the-us/.</p>
+            <p>2. Barros, Aline. 2023. “Chinese Still Largest Group of Foreign Students in US.” Voice of America. December 21, 2023. https://www.voanews.com/a/chinese-still-largest-group-of-foreign-students-in-us/7407560.html.</p>
+            <p>3. Chen, Meiren, and Hyeyoung Bang. 2020. “Exploring East Asian Undergraduate Students’ Perceptions about the Effectiveness of Their Preparation for Study Abroad for Academic Success in U.S. Universities.” Journal of International Students 10 (1): 181–202. https://doi.org/10.32674/jis.v10i1.1049.</p>
+            <p>4. Pennamon, Tiffany. 2018. “Shedding Light on Asian American and Asian Students’ Mental Health Needs.” Diverse: Issues in Higher Education. May 7, 2018. https://www.diverseeducation.com/demographics/asian-american-pacific-islander/article/15102456/shedding-light-on-asian-american-and-asian-students-mental-health-needs.</p>
+            <p>5. Lin, Shu-Yuan, and Susan Day Scherz. 2014. “Challenges Facing Asian International Graduate Students in the US: Pedagogical Considerations in Higher Education.” Journal of International Students 4 (1): 16–33. https://doi.org/10.32674/jis.v4i1.494.</p>
+        </div>
+    </div>
+
+    <!-- Load Footer -->
+    <div id="footer-container"></div>
+
+    <script>
+        // JavaScript to load the navbar.html content into the current page
+        document.addEventListener("DOMContentLoaded", function() {
+          fetch("Basic/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById("navbar-container").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading navbar:", error));
+        });
+      </script>
+    
+    <script>
+      // JavaScript to load the footer.html content into the current page
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("Basic/footer.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("footer-container").innerHTML = data;
+          })
+          .catch(error => console.error("Error loading footer:", error));
+      });
+    </script>
+
+</body>
+</html>
