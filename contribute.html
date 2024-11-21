@@ -10,14 +10,32 @@
             margin: 0; /* Remove default margin from body */
             font-family: Arial, sans-serif; /* Set font family */
         }
+        
         .navbar, .footer {
             width: 100%; /* Ensure full width */
             padding: 0; /* Remove padding to ensure no extra space */
             background-color: #f8f9fa; /* Example background color, adjust as needed */
         }
+        .banner {
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+        }
+
+        .banner img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
         h1 {
             text-align: center; /* Center the heading */
             margin: 20px 0; /* Add margin above and below the heading */
+        }
+        .title {
+            text-align: center; /* Center the content */
+            margin: 0; /* Remove margins */
+            padding: 20px; /* Optional padding for spacing inside the content */
         }
         .content {
             text-align: center; /* Center the content */
@@ -35,8 +53,17 @@
     <!-- Load Navbar -->
     <div id="navbar-container"></div>
 
-    <div class="content">
+
+
+    <div class="title">
         <h1>Share Your Story</h1>
+    </div>
+    
+    <div class="banner" id="banner">
+          <img src="Image/contribute.jpg" alt="Contribute 1">
+    </div>  
+
+    <div class="content">
         <p>We warmly welcome everyone interested in joining the campaign, and we’re delighted to hear that you’d like to contribute your story, interview, or documentary to support East Asian international students. To learn more about you, please fill out the form below. If you feel uncomfortable answering any questions, you may select or input 'Prefer not to say.'</p>
 
         <!-- Embed the Shiny app -->
