@@ -65,6 +65,26 @@
       height: auto;
       object-fit: cover;
     }
+    /* Smallest screens: One picture per row */
+    @media (max-width: 480px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Smaller screens: Two pictures per row */
+    @media (min-width: 481px) and (max-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Largest screens: Four pictures per row */
+    @media (min-width: 1201px) {
+      .gallery {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
   </style>
 </head>
 <body>
