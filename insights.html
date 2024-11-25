@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar Chart with Article</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar, .footer {
+            width: 100%;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .content {
+            margin: 40px;
+            line-height: 1.6;
+        }
+        .content p {
+            margin-bottom: 16px;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .chart-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        canvas {
+            max-width: 90%;
+            max-height: 500px;
+        }
+        .cited {
+            margin: 40px;
+            line-height: 1.6;
+        }
+        .cited p {
+            margin-bottom: 16px;
+            color:grey;
+        }
+        .article {
+            margin: 40px;
+            line-height: 1.6;
+        }
+        .article p {
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Load Navbar -->
+    <div id="navbar-container"></div>
+
+    <h1>Insights From Three Interviews</h1>
+
+    <div class="cited">
+        <p><em>東アジア人っていうくくりの中に自分がいるんだなという意識はアメリカ来てからもそうですけど、UCSDみたいな大きな学校にきてより感じるようになりました。(I realized that I am part of a group identified as East Asians, and coming to a big school like UCSD has made me more aware of this.)</em></p>
+        <p><em>국제 학생들이 영어를 잘 못할 거라는 전제가 깔려 있다는 느낌을 받을 때가 많아요.(I often feel there is an assumption that international students might not be proficient in English.)</em></p>
+        <p><em>亚洲的国际留学生或者亚裔背景的同学，他们的文化究竟是什么样子，不应该只是亚洲学生自己知道，而是应该让更多的学生了解。(The culture of Asian international students or Asian-background classmates should not just be known to Asian students themselves but should be understood by more students.)</em></p>
+    </div>
+    <!-- Radar Chart -->
+    <div class="chart-container">
+        <canvas id="radarChart"></canvas>
+    </div>
+
+    <!-- Article Section -->
+    <div class="article">
+        <p>
+            The three interviewees—Wako, June, and Tony—offer distinct perspectives shaped by their backgrounds, cultural experiences, and expectations at UCSD. However, their narratives reveal overlapping themes in terms of cultural identity, challenges as East Asian students, and interactions within the university environment.
+        </p>
+
+        <h3>Cultural Integration</h3>
+        
+        <p>
+            The interviewees' experiences highlight varying degrees of cultural integration at UCSD.
+        </p>
+        
+        <ul>
+            <p>
+                <li><strong>Wako</strong>, from Japan, appreciated the university's diverse environment, which helped her become more aware of her East Asian identity. She found it easier to connect with other East Asian students but desired more opportunities to interact with peers from different cultural backgrounds.</li>
+            </p>
+            <p>
+                <li><strong>June</strong>, from Korea, faced difficulties in cultural integration, citing stereotypes and assumptions about international students' English proficiency. She noted that cultural differences sometimes hindered group interactions.</li>
+            </p>
+            <p>
+                <li><strong>Tony</strong>, from China, found comfort in UCSD's larger Asian population compared to the Midwest but observed a lack of broader connection between East Asian and non-Asian students. He felt that most interactions remained within self-contained cultural groups.</li>
+            </p>
+        </ul>
+       
+        <p>
+            Despite UCSD’s diverse campus, all three interviewees expressed a need for initiatives fostering meaningful cultural exchanges.
+        </p>
+
+        <h3>Academic Inclusivity</h3>
+        
+
+        <p>
+            The interviewees consistently pointed to challenges in achieving academic inclusivity.
+        </p>
+        
+        <ul>
+            <p>
+                <li><strong>Wako</strong> lamented the limited opportunities in classes to share her cultural background, though she valued moments where discussions allowed her to draw on her Japanese perspective.</li>
+            </p>
+            <p>
+                <li><strong>June</strong> experienced discomfort due to professors’ and teaching assistants’ biases, such as assumptions about language barriers. She noted that examples in class discussions often centered around American contexts, excluding international perspectives.</li>
+            </p>
+            <p>
+                <li><strong>Tony</strong> stressed the systemic gaps in supporting international students, particularly regarding language barriers and a lack of targeted academic resources, such as writing support for non-native English speakers.</li>
+            </p>
+        </ul>
+
+        <p>
+            All three interviewees agreed that more inclusive academic practices and resources tailored to international students are necessary to improve their academic experience.
+        </p>
+
+
+        <h3>Community Support</h3>
+        <p>
+            The sense of community support varied across the interviewees but was generally seen as insufficient.
+        </p>
+        
+        <ul>
+            <p>
+                <li><strong>Wako</strong> found a small but comforting community within Japanese student groups, though she felt these lacked the vibrancy of larger East Asian communities.</li>
+            </p>
+            <p>
+                <li><strong>June</strong> described UCSD as having minimal overall community cohesion and noted a lack of proactive support systems for East Asian students.</li>
+            </p>
+            <p>
+                <li><strong>Tony</strong> observed a fragmented sense of community among East Asian students, where groups operated independently rather than as a collective.</li>
+            </p>
+        </ul>
+        <p>
+            All three believed UCSD should strengthen initiatives to build a more unified community for East Asian and international students.
+        </p>
+
+        <h3>Cultural Awareness</h3>
+        <p>
+            The interviewees shared mixed feelings about UCSD’s efforts to promote cultural awareness.
+        </p>
+       
+        <ul>
+            <p>
+                <li><strong>Wako</strong> participated in cultural festivals and planned to volunteer at events to promote Japanese culture. However, she noted that these events often lacked depth and continuity.</li>
+            </p>
+            <p>
+                <li><strong>June</strong> was disappointed by the limited engagement from non-Asian students at cultural events, which hindered cross-cultural understanding.</li>
+            </p>
+            <p>
+                <li><strong>Tony</strong> highlighted that while UCSD occasionally hosted events celebrating Asian cultures, such as festivals on Library Walk, these lacked follow-up efforts and educational components to foster deeper understanding.</li>
+            </p>
+        </ul>
+
+        <p>
+            All three believed UCSD should strengthen initiatives to build a more unified community for East Asian and international students.
+        </p>
+
+        <h3>Institutional Resources</h3>
+        <p>
+            The availability and accessibility of institutional resources were perceived as inadequate by all three interviewees.
+        </p>
+        
+        <ul>
+            <p>
+                <li><strong>Wako</strong> appreciated some of UCSD's diversity-focused programs but felt more resources should be directed toward helping international students navigate university life.</li>
+            </p>
+            <p>
+                <li><strong>June</strong> pointed out gaps in the orientation process and a lack of ongoing support for international students, including workshops and guidance on job opportunities in the U.S.</li>
+            </p>
+            <p>
+                <li><strong>Tony</strong> emphasized the unique challenges faced by international students, such as finding housing or accessing financial services. He noted that UCSD’s resources were often too general and failed to address the specific needs of East Asian students.</li>
+            </p>
+        </ul>
+
+        <p>
+            Each interviewee called for more tailored support and resources to help international students thrive academically and socially.
+        </p>
+
+        <h3>Conclusion</h3>
+
+        <p>
+            The insights gathered from Wako, June, and Tony paint a detailed picture of the multifaceted experiences of East Asian students at UCSD. While the university's diverse campus offers an opportunity for cultural exchange and growth, systemic challenges hinder a truly inclusive and supportive environment. The interviewees highlighted common struggles, including a lack of meaningful cultural integration, insufficient academic inclusivity, and fragmented community support. These issues are compounded by the absence of robust institutional resources tailored to the unique needs of international and East Asian students.</p>
+            
+        <p>
+            Cultural festivals and activities, though present, often lack depth and fail to create sustained engagement with non-Asian peers. Academic experiences are frequently shaped by assumptions and stereotypes, limiting opportunities for students to share their perspectives and feel valued in classroom discussions. The sense of community, while comforting within smaller ethnic groups, remains disjointed, with few opportunities for broader connections among students of different backgrounds.
+        </p>
+
+        <p><strong>Essay:</strong> <em>Key Insights on the Experiences of East Asian Students at UCSD</em> by Yolanda Liu Xingyan, November 27, 2024</p>
+
+    </div>
+    
+
+<script>
+    // Radar chart data and interactivity
+    const data = {
+        labels: [
+            'Cultural Identity Awareness',
+            'Integration into Broader Community',
+            'Academic Inclusivity Experience',
+            'Community Engagement Efforts',
+            'Desire for Institutional Support'
+        ],
+        datasets: [
+            {
+                label: 'Wako',
+                data: [8, 6, 7, 9, 10],
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1,
+                hoverBackgroundColor: 'rgba(255, 99, 132, 0.4)'
+            },
+            {
+                label: 'June',
+                data: [6, 7, 8, 5, 7],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1,
+                hoverBackgroundColor: 'rgba(54, 162, 235, 0.4)'
+            },
+            {
+                label: 'Tony',
+                data: [7, 8, 6, 8, 9],
+                backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                borderColor: 'rgba(255, 206, 86, 1)',
+                borderWidth: 1,
+                hoverBackgroundColor: 'rgba(255, 206, 86, 0.4)'
+            }
+        ]
+    };
+
+    const config = {
+        type: 'radar',
+        data: data,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false, // Allow full stretching
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top'
+                },
+                tooltip: {
+                    enabled: true,
+                    callbacks: {
+                        label: (tooltipItem) => {
+                            const dataset = data.datasets[tooltipItem.datasetIndex];
+                            const value = dataset.data[tooltipItem.dataIndex];
+                            return `${dataset.label}: ${value}`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                r: {
+                    angleLines: {
+                        display: true
+                    },
+                    suggestedMin: 0,
+                    suggestedMax: 10,
+                    pointLabels: {
+                        font: {
+                            size: 14 // Adjust font size for better readability
+                        }
+                    }
+                }
+            },
+            onHover: (event, activeElements) => {
+                const chart = event.chart;
+
+                // Reset all datasets to full opacity
+                chart.data.datasets.forEach((dataset) => {
+                    dataset.backgroundColor = dataset.backgroundColor.replace(/0\.\d+/g, "0.2");
+                    dataset.borderWidth = 1;
+                });
+
+                // Highlight hovered dataset
+                if (activeElements.length > 0) {
+                    const datasetIndex = activeElements[0].datasetIndex;
+                    chart.data.datasets[datasetIndex].backgroundColor = chart.data.datasets[datasetIndex].backgroundColor.replace(/0\.\d+/g, "0.4");
+                    chart.data.datasets[datasetIndex].borderWidth = 2;
+                }
+
+                // Update the chart for visual feedback
+                chart.update();
+            }
+        }
+    };
+
+    const radarChart = new Chart(
+        document.getElementById('radarChart'),
+        config
+    );
+</script>
+
+
+    <!-- Load Footer -->
+    <div id="footer-container"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("Basic/navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navbar-container").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading navbar:", error));
+
+            fetch("Basic/footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("footer-container").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading footer:", error));
+        });
+    </script>
+</body>
+</html>
