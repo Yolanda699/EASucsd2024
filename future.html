@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file if needed -->
+    <style>
+        body {
+            margin: 0; /* Remove default margin from body */
+            font-family: Arial, sans-serif; /* Set font family */
+        }
+        .navbar, .footer {
+            width: 100%; /* Ensure full width */
+            padding: 0; /* Remove padding for no extra space */
+            background-color: #f8f9fa; /* Example background color, adjust as needed */
+        }
+        h1 {
+            text-align: center; /* Center the heading */
+            margin: 20px 0; /* Margin above and below the title */
+        }
+        .content {
+            margin: 40px; /* Add margin for spacing around the content */
+            line-height: 1.6; /* Improve readability */
+        }
+        .content p {
+            margin-bottom: 16px; /* Space between paragraphs and headings */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Load Navbar -->
+    <div id="navbar-container"></div>
+
+    <h1>Future</h1>
+
+    <div class="content">
+
+        <p>Our vision is a UCSD where every student, regardless of cultural background, feels valued, supported, and empowered to thrive. Combating discrimination against Asian students requires a multifaceted approach, blending representation, policy reform, community building, tailored support, media advocacy, infrastructure improvements, and collaboration. By implementing these actions, UCSD can set a standard for inclusivity and equity in higher education. Together, we can create a campus where diversity is not just celebrated but actively nurtured—a place where all students can achieve their full potential.</p>
+
+        <p>Discrimination and cultural challenges remain persistent barriers to the success and well-being of Asian and Asian American students at UCSD. While the university prides itself on its diversity, the experiences of this demographic reveal critical gaps in support and inclusion. To address these issues, we propose a series of future actions designed to dismantle stereotypes, combat bias, and create a more equitable and welcoming campus environment. By implementing these initiatives, UCSD can foster a culture of understanding and belonging where all students, regardless of background, feel empowered to succeed.
+        </p>
+
+        <p>Representation matters in building an inclusive community. UCSD should prioritize hiring diverse faculty and staff, including mental health professionals who understand and reflect the cultural nuances of Asian students. Increasing the visibility of Asian leaders in campus organizations is equally important, as it provides role models and ensures that their perspectives are included in decision-making processes. Furthermore, celebrating the heritage and contributions of Asian communities through annual events like Asian Culture Week will promote a sense of pride and belonging among students.</p>
+
+        <p>A supportive campus environment can be cultivated through initiatives that encourage connection and solidarity. Expanding programs like cultural and language nights to the broader campus will allow students to celebrate their identities while fostering cross-cultural understanding. Mentorship programs pairing Asian students with faculty, alumni, or senior peers can provide guidance on navigating both academic and social challenges. Collaborations between Asian student organizations and other cultural groups will further enhance intercultural dialogue and solidarity across campus.</p>
+
+        <p>Creating inclusive spaces—both physical and digital—is vital for making Asian students feel safe and supported. UCSD should develop cultural lounges and other dedicated areas where students can connect and decompress. Additionally, critical campus information, such as emergency signs and housing resources, should be available in multiple languages to accommodate the diverse linguistic needs of international students. These efforts demonstrate a commitment to inclusivity that extends beyond the classroom.</p>
+
+        <p>Inclusion requires collective effort. Faculty workshops on the specific needs of Asian students can help educators integrate inclusive practices into their teaching. Intercultural dialogues between students from diverse backgrounds can encourage discussions about privilege, discrimination, and allyship. Such collaborations build a sense of shared responsibility and mutual respect, fostering a unified and inclusive campus culture.</p>
+
+        <p>We believe that change starts with collective effort and sustained dedication. Through our work, we aim to contribute to a campus environment where diversity is not just acknowledged but celebrated, ensuring that all students can thrive and feel empowered at UCSD.
+        </p>
+
+        <p><strong>Essay:</strong> <em>A Vision for the Future</em> by Jacqueline Lim, December 3, 2024</p>
+
+    </div>
+
+    <!-- Load Footer -->
+    <div id="footer-container"></div>
+
+    <script>
+        // JavaScript to load the navbar.html content into the current page
+        document.addEventListener("DOMContentLoaded", function() {
+          fetch("Basic/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById("navbar-container").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading navbar:", error));
+        });
+      </script>
+    
+    <script>
+      // JavaScript to load the footer.html content into the current page
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("Basic/footer.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("footer-container").innerHTML = data;
+          })
+          .catch(error => console.error("Error loading footer:", error));
+      });
+    </script>
+
+</body>
+</html>
