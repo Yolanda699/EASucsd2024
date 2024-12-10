@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Interview</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file if needed -->
+    <style>
+        body {
+            margin: 0; /* Remove default margin from body */
+            font-family: Arial, sans-serif; /* Set font family */
+        }
+        .navbar, .footer {
+            width: 100%; /* Ensure full width */
+            padding: 0; /* Remove padding for no extra space */
+            background-color: #f8f9fa; /* Example background color, adjust as needed */
+        }
+        h1 {
+            text-align: center; /* Center the heading */
+            margin: 20px 0; /* Margin above and below the title */
+        }
+        .content {
+            margin: 40px; /* Add margin for spacing around the content */
+            line-height: 1.6; /* Improve readability */
+        }
+        .content p {
+            margin-bottom: 16px; /* Space between paragraphs and headings */
+        }
+        .video-container {
+            text-align: center; /* Center the video */
+            margin: 20px 0; /* Add space above and below the video */
+        }
+        .video-container iframe {
+            width: 640px; /* Set video width */
+            height: 360px; /* Set video height */
+            border: none; /* Remove iframe border */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Load Navbar -->
+    <div id="navbar-container"></div>
+
+    <h1>Interview with Tony, a graduated Chinese student</h1>
+
+    <div class="content">
+        <p>Tony is an international student from Wuhan, China. He came to the U.S. at 14 or 15 for high school in Kansas City before attending UCSD. He chose UCSD for its academic strength, diverse resources, and the opportunity to explore a bustling city after experiencing life in the Midwest.</p>
+
+        <p>Tony discussed the cultural differences between the Midwest and UCSD. In the Midwest, international students were few, fostering a welcoming yet isolated experience. At UCSD, while there is a larger Asian community, it feels fragmented, leading to self-contained circles. He believes UCSD should organize more meaningful cultural events to promote integration, beyond surface-level activities like festivals that lack depth and continuity.</p>
+            
+        <p>Tony also highlighted disparities in school support for Asian versus local holidays. While events like Halloween are celebrated, Asian festivals lack school-led initiatives. He suggested incorporating cultural themes into existing activities like movie nights to bridge this gap.</p>
+
+        <p>Tony是来自中国武汉的国际学生。他14或15岁时来到美国，在堪萨斯城的一所天主教高中学习。选择UCSD是因为其学术实力强大、多样化的资源，以及能在繁华城市中体验大学生活。</p>
+
+        <p>Tony比较了中部地区与UCSD的文化差异。在中部，国际学生数量少，虽然环境友好但较孤立。在UCSD，亚裔学生社区更大，但相对分散，形成“圈子文化”。他认为UCSD应组织更多有深度的文化活动，超越表面化的节日庆祝，促进更多跨文化交流。</p>
+
+        <p>他还指出学校对亚裔节日和本地节日的支持差异。如万圣节活动丰富，但亚裔节日缺乏校方主导的组织。他建议将亚洲文化融入现有活动，例如电影之夜，以填补这一空白。</p>
+
+        <div class="video-container">
+            <!-- Replace the src with your YouTube video URL -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/eYSkTvYlf5U?si=2y04g_Me5ODIn58a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Load Footer -->
+    <div id="footer-container"></div>
+
+    <script>
+        // JavaScript to load the navbar.html content into the current page
+        document.addEventListener("DOMContentLoaded", function() {
+          fetch("Basic/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById("navbar-container").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading navbar:", error));
+        });
+      </script>
+    
+    <script>
+      // JavaScript to load the footer.html content into the current page
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("Basic/footer.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("footer-container").innerHTML = data;
+          })
+          .catch(error => console.error("Error loading footer:", error));
+      });
+    </script>
+
+</body>
+</html>

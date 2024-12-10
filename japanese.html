@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Interview</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file if needed -->
+    <style>
+        body {
+            margin: 0; /* Remove default margin from body */
+            font-family: Arial, sans-serif; /* Set font family */
+        }
+        .navbar, .footer {
+            width: 100%; /* Ensure full width */
+            padding: 0; /* Remove padding for no extra space */
+            background-color: #f8f9fa; /* Example background color, adjust as needed */
+        }
+        h1 {
+            text-align: center; /* Center the heading */
+            margin: 20px 0; /* Margin above and below the title */
+        }
+        .content {
+            margin: 40px; /* Add margin for spacing around the content */
+            line-height: 1.6; /* Improve readability */
+        }
+        .content p {
+            margin-bottom: 16px; /* Space between paragraphs and headings */
+        }
+        .video-container {
+            text-align: center; /* Center the video */
+            margin: 20px 0; /* Add space above and below the video */
+        }
+        .video-container iframe {
+            width: 640px; /* Set video width */
+            height: 360px; /* Set video height */
+            border: none; /* Remove iframe border */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Load Navbar -->
+    <div id="navbar-container"></div>
+
+    <h1>Interview with Wako, a year 3 Japanese student</h1>
+
+    <div class="content">
+        <p>Wako, raised in Japan until 18, always admired American culture, particularly through Hollywood films. Preferring the flexible major system in U.S. universities, she transferred to UCSD for its strong UI/UX design programs and favorable California climate.</p>
+
+        <p>Wako participates in Japanese cultural clubs but finds the community smaller compared to other East Asian groups. She values events like UCSD’s spring festival to promote Japanese culture and aims to balance integrating into American culture while sharing her own. In anthropology classes, Wako sometimes shares perspectives from Japan due to limited knowledge of U.S. issues. She hopes for more spaces, both in and outside class, to exchange experiences based on diverse backgrounds.</p>
+            
+        <p>In anthropology classes, Wako sometimes shares perspectives from Japan due to limited knowledge of U.S. issues. She hopes for more spaces, both in and outside class, to exchange experiences based on diverse backgrounds. While forming connections with East Asians feels easier, Wako aspires to make friends from varied backgrounds. She acknowledges UCSD’s events, like Filipino heritage celebrations, as good starting points for cross-cultural interactions. Wako sees UCSD as providing opportunities to explore other cultures, such as heritage festivals. She appreciates the chance to learn about American university traditions like homecoming and sororities while also promoting her Japanese heritage.</p>
+
+        <p>Wakoさんは日本で18歳まで育ち、ハリウッド映画を通じてアメリカ文化に憧れを抱いていました。日本の大学より柔軟な専攻選択システムを求め、UI/UXデザインを学べるUCSDに編入。カリフォルニアの気候も選択理由の一つ。</p>
+
+        <p>カリフォルニアはポップカルチャーの中心地として和子さんの興味に合致。UCSDの多様性に触れ、東アジア人としての意識が強まりました。日本文化に興味がある人々のクラブ活動に参加中。他の東アジアコミュニティと比べ小規模ですが、春祭りなどで日本文化を広めることに積極的。アメリカ文化への統合と日本文化の共有のバランスを目指しています。
+        </p>
+
+        <p>人類学の授業でグループディスカッションに参加。アメリカの事情に詳しくないため、日本の課題を共有する場面も。多様な背景を共有する場が増えることを望んでいます。東アジアの学生とのつながりが作りやすい一方、多様な背景を持つ友人も作りたいと考えています。フィリピン文化のイベントなど、UCSDの取り組みを文化交流のきっかけとして評価しています。UCSDでは他文化の学びの場が提供され、フィリピン料理フェスティバルやアメリカの大学文化（ホームカミング、ソロリティなど）に興味を持っています。一方で、日本文化の発信にも力を入れていきたいと考えています。</p>
+
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2Vu4kibX9U0?si=mgjdGgS3b82yMyV_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Load Footer -->
+    <div id="footer-container"></div>
+
+    <script>
+        // JavaScript to load the navbar.html content into the current page
+        document.addEventListener("DOMContentLoaded", function() {
+          fetch("Basic/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById("navbar-container").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading navbar:", error));
+        });
+      </script>
+    
+    <script>
+      // JavaScript to load the footer.html content into the current page
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("Basic/footer.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("footer-container").innerHTML = data;
+          })
+          .catch(error => console.error("Error loading footer:", error));
+      });
+    </script>
+
+</body>
+</html>
