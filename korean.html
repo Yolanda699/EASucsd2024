@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Interview</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file if needed -->
+    <style>
+        body {
+            margin: 0; /* Remove default margin from body */
+            font-family: Arial, sans-serif; /* Set font family */
+        }
+        .navbar, .footer {
+            width: 100%; /* Ensure full width */
+            padding: 0; /* Remove padding for no extra space */
+            background-color: #f8f9fa; /* Example background color, adjust as needed */
+        }
+        h1 {
+            text-align: center; /* Center the heading */
+            margin: 20px 0; /* Margin above and below the title */
+        }
+        .content {
+            margin: 40px; /* Add margin for spacing around the content */
+            line-height: 1.6; /* Improve readability */
+        }
+        .content p {
+            margin-bottom: 16px; /* Space between paragraphs and headings */
+        }
+        .video-container {
+            text-align: center; /* Center the video */
+            margin: 20px 0; /* Add space above and below the video */
+        }
+        .video-container iframe {
+            width: 1024px; /* Set video width */
+            height: 576px; /* Set video height */
+            border: none; /* Remove iframe border */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Load Navbar -->
+    <div id="navbar-container"></div>
+
+    <h1>Interview with June, a year 4 Korean student</h1>
+
+    <div class="content">
+        <p>June, a fourth-year Cognitive Science major at UCSD from Seoul, Korea, shares her experiences as an international student. She chose UCSD for its size and reputation as a large public university in the U.S. However, as an East Asian student, she feels pressure to conform to the stereotype that Asians are academically high-achieving, particularly in subjects like math. This has influenced her decision to take higher-level math courses, even though she feels burdened by these expectations. Despite this, June believes that UCSD lacks a strong sense of community for East Asian students, and resources are limited unless actively sought out.</p>
+
+        <p>June has also experienced instances of prejudice and discomfort, particularly in class discussions and group projects. She recalls a moment when a professor referred to "international students who can't speak English," which made her feel uncomfortable. Furthermore, she feels that class examples often focus on American contexts, making it harder for international students to relate. In group projects, she feels the weight of being an international student and often works harder to avoid being perceived as a hindrance. Additionally, she has noticed that TAs sometimes speak slowly to her, assuming she might struggle with English, which she finds discriminatory.</p>
+            
+        <p>June suggests that UCSD could improve its support for international students by providing more consistent and clear resources beyond initial orientation. She advocates for workshops and programs that help international students secure jobs in the U.S. after graduation and believes the school should offer more inclusive programs that cater to the diversity of its student body. Overall, June feels that UCSD could do more to create a more inclusive environment for international students, both academically and socially.</p>
+
+        <p>서울에서 온 UCSD의 인지과학 전공 4학년인 June 국제학생으로서의 경험을 공유합니다. 그녀는 UCSD가 미국의 큰 공립대학으로서의 규모와 명성 때문에 선택했다고 합니다. 그러나 동아시아 학생으로서 그녀는 아시아 학생들이 학문적으로 우수하다는 고정관념에 압박감을 느끼며, 특히 수학과 같은 과목에서 이 기대에 부응해야 한다는 부담을 느끼고 있습니다. 이는 고급 수학 과목을 선택하게 만든 원인이기도 합니다. 그럼에도 불구하고, June은 UCSD가 동아시아 학생들을 위한 강한 공동체 의식이 부족하며, 자원은 적극적으로 찾아야만 접근할 수 있다고 말합니다.</p>
+
+        <p>June은 수업과 그룹 프로젝트에서 편견과 불편함을 경험했다고 합니다. 예를 들어, 한 교수님이 "영어를 못하는 국제학생들"에 대해 언급했을 때 매우 불편한 감정을 느꼈다고 합니다. 또한 수업에서 다루는 예시들이 주로 미국의 사회적, 정치적 맥락에 초점을 맞추고 있어 국제학생들이 공감하기 어렵다고 느꼈습니다. 그룹 프로젝트에서는 국제학생이라는 부담감 때문에 더 열심히 작업을 하려고 한다고 합니다. 또한, 몇몇 조교들은 June이 영어를 잘 못할 것이라고 가정하며 말을 느리게 하는 경향이 있어 그녀는 이를 차별적으로 느낀다고 밝혔습니다.
+        </p>
+
+        <p>June은 UCSD가 국제학생들을 위한 지속적이고 명확한 자원을 제공해야 한다고 제안합니다. 졸업 후 미국에서 안정적인 직업을 구할 수 있도록 도와주는 워크숍과 프로그램이 필요하다고 강조하며, 학교가 학생들의 다양성을 반영한 포용적인 프로그램을 제공해야 한다고 믿고 있습니다. 전반적으로 June은 UCSD가 학문적, 사회적으로 국제학생들에게 더 포용적인 환경을 조성할 수 있도록 노력해야 한다고 느끼고 있습니다.</p>
+
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jL6_dfzAdjs?si=YNwdhAc0Sdc8ODpF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Load Footer -->
+    <div id="footer-container"></div>
+
+    <script>
+        // JavaScript to load the navbar.html content into the current page
+        document.addEventListener("DOMContentLoaded", function() {
+          fetch("Basic/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById("navbar-container").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading navbar:", error));
+        });
+      </script>
+    
+    <script>
+      // JavaScript to load the footer.html content into the current page
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("Basic/footer.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("footer-container").innerHTML = data;
+          })
+          .catch(error => console.error("Error loading footer:", error));
+      });
+    </script>
+
+</body>
+</html>

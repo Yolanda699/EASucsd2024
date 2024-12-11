@@ -85,6 +85,16 @@
         grid-template-columns: repeat(4, 1fr);
       }
     }
+    
+    .video-container {
+            text-align: center; /* Center the video */
+            margin: 20px 0; /* Add space above and below the video */
+        }
+        .video-container iframe {
+            width: 1024px; /* Set video width */
+            height: 576px; /* Set video height */
+            border: none; /* Remove iframe border */
+        }
   </style>
 </head>
 <body>
@@ -99,8 +109,8 @@
 
 <!-- Video Preview Section -->
 <h2 class="section-title">Video Preview</h2>
-<div class="trailer">
-  <img src="Placeholder.jpg" alt="Video Trailer Placeholder">
+<div class="video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/2Vu4kibX9U0?si=mgjdGgS3b82yMyV_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 <!-- Gallery Section -->

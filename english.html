@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Interview</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file if needed -->
+    <style>
+        body {
+            margin: 0; /* Remove default margin from body */
+            font-family: Arial, sans-serif; /* Set font family */
+        }
+        .navbar, .footer {
+            width: 100%; /* Ensure full width */
+            padding: 0; /* Remove padding for no extra space */
+            background-color: #f8f9fa; /* Example background color, adjust as needed */
+        }
+        h1 {
+            text-align: center; /* Center the heading */
+            margin: 20px 0; /* Margin above and below the title */
+        }
+        .content {
+            margin: 40px; /* Add margin for spacing around the content */
+            line-height: 1.6; /* Improve readability */
+        }
+        .content p {
+            margin-bottom: 16px; /* Space between paragraphs and headings */
+        }
+        .video-container {
+            text-align: center; /* Center the video */
+            margin: 20px 0; /* Add space above and below the video */
+        }
+        .video-container iframe {
+            width: 1024px; /* Set video width */
+            height: 576px; /* Set video height */
+            border: none; /* Remove iframe border */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Load Navbar -->
+    <div id="navbar-container"></div>
+
+    <h1>Interview with Brianna, a year 4 PhD student and TA</h1>
+
+    <div class="content">
+        <p>Brianna, a fourth-year anthropology PhD student at UCSD, discusses her experience teaching Spanish linguistics. In her second year of teaching, Brianna recognizes that while the course material focuses heavily on Latin American cultures, it lacks inclusion of East Asian cultures. She highlights how simple additions, such as including Asian countries when discussing topics like itineraries or prepositions in Spanish, could make the material more inclusive. She also suggests incorporating the cultural influences of countries like the Philippines, where Spanish is widely spoken, and acknowledging the Asian migration history in places like Chihuahua, Mexico.</p>
+
+        <p>Brianna proposes an easy change to improve inclusivity: asking students where they are from at the beginning of each quarter and recording that information. This would allow instructors to be more mindful and specific in drawing from students' diverse backgrounds, creating opportunities for cross-cultural discussions. By doing so, instructors could connect course material to students’ lived experiences, making the learning environment feel more personal and inclusive for everyone, including East Asian students.</p>
+            
+        <p>She emphasizes the importance of building a welcoming community in the classroom, especially in linguistics, where students are learning about languages to engage with different cultures. She praises the effort to make all students feel included and safe, noting that even small changes, like acknowledging cultural backgrounds, can make a significant difference. Brianna appreciates the opportunity to reflect on these issues and is committed to continuing the conversation with her colleagues to improve the classroom experience for all students.</p>
+
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6OE3nyBCNPU?si=seCo8XmakuIPpwIb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Load Footer -->
+    <div id="footer-container"></div>
+
+    <script>
+        // JavaScript to load the navbar.html content into the current page
+        document.addEventListener("DOMContentLoaded", function() {
+          fetch("Basic/navbar.html")
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById("navbar-container").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading navbar:", error));
+        });
+      </script>
+    
+    <script>
+      // JavaScript to load the footer.html content into the current page
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("Basic/footer.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("footer-container").innerHTML = data;
+          })
+          .catch(error => console.error("Error loading footer:", error));
+      });
+    </script>
+
+</body>
+</html>
